@@ -9,8 +9,7 @@ function Home() {
     const image_path = 'https://image.tmdb.org/t/p/w500/'
 
     useEffect(() => {
-        // fetch('https://api.themoviedb.org/3/movie/popular?api_key=c78f11732285623d000ef2be482fdabe&language=en-US&page=1')
-        fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=c78f11732285623d000ef2be482fdabe&language=en-US&page=1')
+        fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=c78f11732285623d000ef2be482fdabe&language=en-US&page=6')
         .then(response => response.json())
         .then(data => setMovies(data.results))
 
@@ -18,7 +17,7 @@ function Home() {
     
     return (
         <Container>
-            <h1>Movies</h1>
+            <h1>Movie Release Information <br/>in Theaters</h1>
             <MovieList>
                 {
                      movies.map(movie => {
@@ -33,6 +32,7 @@ function Home() {
                      })
                 }
             </MovieList>
+            <footer>Website Developed by Arian Viegas</footer>
         </Container>
     )
 }
