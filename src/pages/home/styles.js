@@ -28,7 +28,7 @@ export const Movie = styled.li`
 
  img{
     width: 180px;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     margin-bottom: 2rem;
 }
 
@@ -39,10 +39,11 @@ export const Movie = styled.li`
 }
 
  a {
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
  a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    border: 3px solid;
 }
 `
